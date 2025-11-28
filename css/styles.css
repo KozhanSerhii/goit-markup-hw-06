@@ -719,7 +719,7 @@ img {
 
     .social-link-teammate:hover,
     .social-link-teammate:focus {
-        background-color: #404bbf;
+        background-color: var(--ocean);
     }
 }
 
@@ -732,7 +732,132 @@ img {
         flex-wrap: nowrap;
         gap: 24px;
     }
-
 }
 
 /* #endregion  our team style */
+
+
+/* #region  our portfolio style */
+.our-portfolio {
+    padding: 96px 0;
+}
+
+.portfolio-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+    margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 48px;
+}
+
+.portfolio-list-item {
+    /* max-width: 288px; */
+}
+
+.portfolio-list-item .container {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: none;
+}
+
+.portfolio-photo {
+    height: 280px;
+}
+
+.portfolio-item-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    margin-bottom: 8px; 
+}
+
+.item-description {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+.text-overlay{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+
+    .portfolio-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 48px;
+        column-gap: 24px;
+    }
+
+    .portfolio-item-item{
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .portfolio-list-item:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
+        ;
+    }
+
+    .portfolio-photo {
+        height: 300px;
+        width:356px;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .our-portfolio {
+        padding: 120px 0;
+    }
+
+    .portfolio-list-item {
+        flex-basis: calc((100% - 48px) / 3);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .portfolio-list-item:hover .text-overlay {
+        transform: translate(0);
+    }
+
+    .container-overlay {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .text-overlay {
+        display:block ;
+    }
+
+    .text-overlay {
+        position: absolute;
+        padding: 40px 32px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #F4F4FD;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #4D5AE5;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+
+/* #endregion  our portfolio style */
+
