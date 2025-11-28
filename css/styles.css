@@ -402,7 +402,7 @@ img {
 /* #endregion  mobile menu style */
 
 
-/* #region  region style */
+/* #region hero region style */
 
 .section-hero {
     background-color: var(--navy-blue);
@@ -510,4 +510,101 @@ img {
         }
 }
 
-/* #endregion  region style */
+/* #endregion hero region style */
+
+/* #region our-advantage style */
+.container-advantage-icon{
+    display: none;
+}
+
+.our-advantage {
+    padding:96px 0;
+}
+
+.advantage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.advantage-list-item {
+    
+}
+
+.advantage-title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    margin-bottom: 8px;
+}
+
+.text-advantage {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+@media screen and (min-width:768px) {
+    
+        .advantage-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 72px;
+            column-gap: 24px;
+        }
+    
+        .advantage-list-item {
+            width: calc((100% - 24px) / 2);
+        }
+
+        .advantage-title {
+            text-align:left ;
+        }
+      
+}
+
+@media screen and (min-width:1158px) {
+    .our-advantage {
+        padding: 120px 0;
+    }
+
+    .advantage-list {
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+    .advantage-list-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .container-advantage-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--light-slate);
+        border-radius: 4px;
+        background-color: var(--cloud);
+        min-height: 112px;
+        margin-bottom: 8px;
+    }
+
+    .advantage-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        color: var(--navy-blue);
+    }
+
+    .text-advantage {
+        font-weight: 400;
+        color: var(--slate);
+    }
+
+}
+
+/* #endregion our-advantage style */
