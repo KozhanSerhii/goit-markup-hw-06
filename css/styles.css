@@ -225,6 +225,11 @@ img {
         color: var(--slate);
     }
 
+    .address-link:hover,
+    .address-link:focus {
+        color: #404BBF;
+    }
+
 }
 
 @media screen and (min-width:1158px) {
@@ -247,12 +252,6 @@ img {
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-    .address-link:hover,
-    .address-link:focus {
-        color: #404BBF;
-    }
-
 }
 
 /* #endregion  header style */
@@ -513,6 +512,7 @@ img {
 /* #endregion hero region style */
 
 /* #region our-advantage style */
+
 .container-advantage-icon{
     display: none;
 }
@@ -608,3 +608,131 @@ img {
 }
 
 /* #endregion our-advantage style */
+
+/* #region  our team style */
+
+.our-team {
+    background-color: var(--cloud);
+    padding: 96px 0;
+}
+
+.our-team.container {
+    background-color: var(--cloud);
+}
+
+.team-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+}
+
+.team-list-item {
+    background-color: var(--white);
+    max-width: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-list-item .container {
+    padding: 32px 0;
+}
+
+.teammate-photo {}
+
+.teammate-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
+    margin-bottom: 8px;
+}
+
+.teammate-position {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--slate);
+    margin-bottom: 8px;
+    text-align: center;
+     
+}
+
+.list-social-teammate {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.item-social-teammate {
+    width: calc((100% - 72px) / 4);
+}
+
+.social-link-teammate {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--iris);
+    border-radius: 50%;
+}
+
+.svg-icon-socail {
+    fill: var(--cloud);
+}
+
+@media screen and (min-width:768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+
+    .team-list-item{
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .social-link-teammate {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .social-link-teammate:hover,
+    .social-link-teammate:focus {
+        background-color: #404bbf;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .our-team {
+        padding: 120px 0;
+    }
+
+    .team-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+}
+
+/* #endregion  our team style */
